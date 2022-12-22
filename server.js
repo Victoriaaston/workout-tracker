@@ -12,7 +12,7 @@ require("./config/database")
 require("./config/passport")
 
 var indexRouter = require('./routes/index');
-var movesRouter = require('./routes/moves');
+var workoutsRouter = require('./routes/workouts');
 
 var app = express();
 
@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use('/moves', movesRouter);
+app.use('/workouts', workoutsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -5,6 +5,8 @@ const workoutCtrl = require("../controllers/workouts")
 /* GET users listing. */
 router.get('/', workoutCtrl.index)
 
+router.get("/new", workoutCtrl.new)
+
 
 
 

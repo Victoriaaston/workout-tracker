@@ -17,3 +17,10 @@ a {
 .login img {
   height: 30px;
 }
+
+nav {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}

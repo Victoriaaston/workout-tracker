@@ -7,7 +7,9 @@ router.get('/', workoutCtrl.index)
 
 router.get("/new", workoutCtrl.new)
 
+router.post("/:day", workoutCtrl.create)
 
+router.get("/:day", workoutCtrl.show)
 
 
 module.exports = router;

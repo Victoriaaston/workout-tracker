@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>Add a new workout move: </h1>
-<form action="/workouts/day" method="">
+<form action="/workouts/<%= Workout.day %>" method="POST">
     <label>Day of the week: </label>
     <select name="day">
         <option value="Monday">Monday</option>
@@ -32,6 +32,9 @@
     <br>
     <label>Muscle Group: </label>
     <input type="text" name="muscleGroup">
+    <br>
+    <br>
+    <input type="Submit" value="Add Move">
 </form>
 
 </body>

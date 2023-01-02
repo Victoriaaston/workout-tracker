@@ -1,5 +1,27 @@
 <%- include('../partials/header') %>
 
-<a href="/workouts/monday">Monday... ID?</a>
+<table id="list">
+    <thead>
+        <tr>
+            <th>Moves</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% workouts.forEach(function(w) {%>
+            <tr>
+                <td><%= w.name %></td>
+            </tr>
+            <tr>
+                <td><%= w.reps %></td>
+            </tr>
+            <tr>
+                <td><%= w.sets %></td>
+            </tr>
+
+            <% }) %>
+    </tbody>
+
+</table>
 
 </body>

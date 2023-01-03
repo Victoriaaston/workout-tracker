@@ -30,8 +30,8 @@ function newWorkout(req, res) {
 function create(req, res) {
     const workout = new Workout(req.body)
     workout.save(function(err) {
-        if (err) return res.redirect("/workouts/new")
-        res.redirect("workouts/new")
+        if (err) return res.redirect("workouts/new")
+        res.redirect("workouts")
     })
 }
 

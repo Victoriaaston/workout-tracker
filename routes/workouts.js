@@ -7,9 +7,9 @@ router.get('/', workoutCtrl.index)
 
 router.get("/new", workoutCtrl.new)
 
-router.post("/all", workoutCtrl.create)
+router.post("/", workoutCtrl.create)
 
-router.get("/all", workoutCtrl.show)
+router.get("/", workoutCtrl.show)
 
 
 module.exports = router;

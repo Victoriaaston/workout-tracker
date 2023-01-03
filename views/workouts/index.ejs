@@ -4,7 +4,6 @@
     <thead>
         <tr>
             <th>Moves</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -21,7 +20,12 @@
             <tr>
                 <td><%= w.muscleGroup %></td>
             </tr>
-            <% }) %>
+            <td>
+                <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
+                    <button type="submit">X</button>
+                </form>
+            </td>
+        <% }) %>
     </tbody>
 
 </table>

@@ -1,15 +1,11 @@
 <%- include('../partials/header') %>
 
 <!-- for each?  -->
-<h1>this page is linked!</h1>
+<h1><%= title %></h1>
 
-<thead>
-    <tr>
-        <th> <%= title %></th>
-    </tr>
-</thead>
 <tbody>
     <% workouts.forEach(function(Workout) { %>
+        <br>
         <tr>
             <td>Move: <%= Workout.name %></td>
         </tr>
@@ -29,6 +25,13 @@
         <tr>
             <td>muscleGroup: <%= Workout.muscleGroup %></td>
         </tr>
+        <tr>
+            <form action="/workouts/<%= Workout._id %>?_method=PUT" method="POST">
+                <button type="submit">update</button>
+            </form>
+        </tr>
+        <br>
+        <br>
     <% }) %>
     </tbody>
 </body>

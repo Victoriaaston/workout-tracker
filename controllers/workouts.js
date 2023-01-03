@@ -1,3 +1,4 @@
+const workout = require("../models/workout")
 const Workout = require("../models/workout")
 
 module.exports = {
@@ -5,6 +6,8 @@ module.exports = {
     new: newWorkout, 
     create,
     show, 
+    delete: deleteWorkout,
+    update
 }
 
 
@@ -27,9 +30,28 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    console.log(req.params)
     Workout.find({day: req.params.day}, function(err, workouts) {
-        console.log(workouts)
-        res.render("workouts/show", {title: `Day ${workouts.day}`, workouts})
+        res.render("workouts/show", {title: `Day ${req.params.day}`, workouts})
+    })
+}
+
+function deleteWorkout (req, res, next) {
+    Workout.findById(req.params.id).then(function(workout) {
+        workout.remove()
+        res.redirect("/workouts")
+    }).catch(function(err) {
+        return next(err)
+    })
+}
+
+function update(req, res, next) {
+    Workout.findById(req.params.id).then(function(workout) {
+        workout.update()
+        workout.save(function(err) {
+            if (err) return res.redirect("/workouts")
+            res.redirect("/workouts")
+        })
+    }).catch(function(err) {
+        return next(err)
     })
 }

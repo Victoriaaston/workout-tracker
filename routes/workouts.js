@@ -11,5 +11,9 @@ router.post("/", workoutCtrl.create)
 
 router.get("/:day", workoutCtrl.show)
 
+router.delete("/:id", workoutCtrl.delete)
+
+router.put("/:id", workoutCtrl.update)
+
 
 module.exports = router;

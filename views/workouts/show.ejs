@@ -2,21 +2,33 @@
 
 <!-- for each?  -->
 <h1>this page is linked!</h1>
-    <section>
-        <div>
-            <%= Workout.name %>
-        </div>
-        <div>
-            <%= Workout.description %>
-        </div>
-        <div>
-            <%= Workout.reps %>
-        </div>
-        <div>
-            <%= Workout.sets %>
-        </div>
-        <div>
-            <%= Workout.muscleGroup %>
-        </div>
-    </section>
+
+<thead>
+    <tr>
+        <th> <%= title %></th>
+    </tr>
+</thead>
+<tbody>
+    <% workouts.forEach(function(Workout) { %>
+        <tr>
+            <td>Move: <%= Workout.name %></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Description: <%= Workout.description %></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Reps: <%= Workout.reps %></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Sets: <%= Workout.sets %></td>
+        </tr>
+        <br>
+        <tr>
+            <td>muscleGroup: <%= Workout.muscleGroup %></td>
+        </tr>
+    <% }) %>
+    </tbody>
 </body>

@@ -1,21 +1,12 @@
 const Workout = require("../models/workout")
 
 module.exports = {
-    showOne, 
-    showAll,
     index, 
     new: newWorkout, 
     create,
     show, 
 }
 
-function showOne(){
-    
-}
-
-function showAll() {
-
-}
 
 function index(req, res) {
     Workout.find({}, function(err, workouts) {
@@ -36,8 +27,8 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    // Workout.filter(req.params.day, function(err, workout) {
-    //     console.log(req.params.day)
-        res.render("workouts/show", {title: "workout days", Workout})
-    // })
+    Workout.find({'workouts.day':req.params.day}, function(err, workouts) {
+        res.render("workouts/show", {title: `Day ${workouts.day}`, workouts})
+        console.log(workouts)
+    })
 }

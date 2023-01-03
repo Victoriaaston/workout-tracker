@@ -27,8 +27,9 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    Workout.find({'workouts.day':req.params.day}, function(err, workouts) {
-        res.render("workouts/show", {title: `Day ${workouts.day}`, workouts})
+    console.log(req.params)
+    Workout.find({day: req.params.day}, function(err, workouts) {
         console.log(workouts)
+        res.render("workouts/show", {title: `Day ${workouts.day}`, workouts})
     })
 }

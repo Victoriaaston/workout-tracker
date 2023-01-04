@@ -50,10 +50,11 @@ function edit(req, res) {
 }
 
 function update(req, res, next) {
-    const name = Workout.name
+    // const name = Workout.name
     Workout.findById(req.params.id) 
-        .populate(name)
+        .populate("Workout")
         .exec(function(err, workout) {
+            console.log(workout)
             workout.update(req.body)
         })
         workout.save(function(err) {

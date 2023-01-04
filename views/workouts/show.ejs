@@ -4,30 +4,30 @@
 <h1><%= title %></h1>
 
 <tbody>
-    <% workouts.forEach(function(Workout) { %>
+    <% workouts.forEach(function(workout) { %>
         <br>
         <tr>
-            <td>Move: <%= Workout.name %></td>
+            <td>Move: <%= workout.name %></td>
         </tr>
         <br>
         <tr>
-            <td>Description: <%= Workout.description %></td>
+            <td>Description: <%= workout.description %></td>
         </tr>
         <br>
         <tr>
-            <td>Reps: <%= Workout.reps %></td>
+            <td>Reps: <%= workout.reps %></td>
         </tr>
         <br>
         <tr>
-            <td>Sets: <%= Workout.sets %></td>
+            <td>Sets: <%= workout.sets %></td>
         </tr>
         <br>
         <tr>
-            <td>muscleGroup: <%= Workout.muscleGroup %></td>
+            <td>muscleGroup: <%= workout.muscleGroup %></td>
         </tr>
         <br>
         <tr>
-            <button type="submit"><a href="/workouts/<%= Workout._id %>/edit">Edit</a></button>
+            <button type="submit"><a href="/workouts/<%= workout._id %>/edit">Edit</a></button>
         </tr>
         <br>
         <br>

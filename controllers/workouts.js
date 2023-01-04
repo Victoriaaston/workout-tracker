@@ -46,21 +46,27 @@ function deleteWorkout (req, res, next) {
 }
 
 function edit(req, res) {
-    res.render("workouts/update", {Workout})
+    Workout.findById(req.params.id).then(function (workout) {
+    res.render("workouts/update", {workout})
+ })
 }
 
-function update(req, res, next) {
-    // const name = Workout.name
-    Workout.findById(req.params.id) 
-        .populate("Workout")
-        .exec(function(err, workout) {
-            console.log(workout)
-            workout.update(req.body)
+async function update(req, res, next) {
+    try{
+    const filter = { _id: req.params.id };
+        let workout = await Workout.findOneAndUpdate(filter, req.body, {
+            upsert: true
+        });
+        await workout.save((err) => {
+            return res.redirect(`/workouts/${workout.day}`)
         })
-        workout.save(function(err) {
-            if (err) return res.redirect("/workouts")
-            res.redirect("/workouts")
-        }).catch(function(err) {
-        return next(err)
-    })
-}
+    
+    
+    } catch{(err)=>{
+    console.warn(err.message)
+    
+    }
+    
+    }
+        
+    }

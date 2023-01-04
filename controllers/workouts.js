@@ -7,6 +7,7 @@ module.exports = {
     create,
     show, 
     delete: deleteWorkout,
+    edit,
     update
 }
 
@@ -44,14 +45,21 @@ function deleteWorkout (req, res, next) {
     })
 }
 
+function edit(req, res) {
+    res.render("workouts/update", {Workout})
+}
+
 function update(req, res, next) {
-    Workout.findById(req.params.id).then(function(workout) {
-        workout.update()
+    const name = Workout.name
+    Workout.findById(req.params.id) 
+        .populate(name)
+        .exec(function(err, workout) {
+            workout.update(req.body)
+        })
         workout.save(function(err) {
             if (err) return res.redirect("/workouts")
             res.redirect("/workouts")
-        })
-    }).catch(function(err) {
+        }).catch(function(err) {
         return next(err)
     })
 }

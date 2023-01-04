@@ -13,6 +13,8 @@ router.get("/:day", workoutCtrl.show)
 
 router.delete("/:id", workoutCtrl.delete)
 
+router.get("/:id/edit", workoutCtrl.edit)
+
 router.put("/:id", workoutCtrl.update)
 
 

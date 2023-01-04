@@ -25,10 +25,9 @@
         <tr>
             <td>muscleGroup: <%= Workout.muscleGroup %></td>
         </tr>
+        <br>
         <tr>
-            <form action="/workouts/<%= Workout._id %>?_method=PUT" method="POST">
-                <button type="submit">update</button>
-            </form>
+            <button type="submit"><a href="/workouts/<%= Workout._id %>/edit">Edit</a></button>
         </tr>
         <br>
         <br>

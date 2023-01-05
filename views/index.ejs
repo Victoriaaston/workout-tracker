@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Workout tracker</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/workouts">Click to view the main screen</a>
+  <body id="start">
+    <div class="container mt-5">
+      <div id="welcome" class="card">
+        <div class="card-body p-4">
+          <h1 class="card-title display-4 text-center mb-5">Ready to track your workouts?</h1>
+          <div class="text-center">
+            <a href="/workouts/new" class="btn btn-primary btn-lg">Log In</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+
+
+
+

@@ -54,3 +54,16 @@ nav a {
   padding: 18px;
   box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
 }
+
+#start {
+  background-image: url("https://www.azuremagazine.com/wp-content/uploads/2021/01/bikehero-1600x900.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#welcome {
+  background-color: rgba(0, 0, 0, 0.33);
+  color: white;
+}

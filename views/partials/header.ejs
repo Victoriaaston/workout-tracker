@@ -13,16 +13,20 @@
     <nav>
         <a href="/workouts/new">Add a new move</a>
         <a href="/workouts">View all moves</a>
-        <a href="/workouts/Monday">Monday</a>
-        <a href="/workouts/Tuesday">Tuesday</a>
-        <a href="/workouts/Wednesday">Wednesday</a>
-        <a href="/workouts/Thursday">Thursday</a>
-        <a href="/workouts/Friday">Friday</a>
-        <a href="/workouts/Saturday">Saturday</a>
-        <a href="/workouts/Sunday">Sunday</a>
+        <select onchange="location = this.value;">
+          <option value="/workouts/Monday">Select the day...</option>
+          <option value="/workouts/Monday">Monday</option>
+          <option value="/workouts/Tuesday">Tuesday</option>
+          <option value="/workouts/Wednesday">Wednesday</option>
+          <option value="/workouts/Thursday">Thursday</option>
+          <option value="/workouts/Friday">Friday</option>
+          <option value="/workouts/Saturday">Saturday</option>
+          <option value="/workouts/Sunday">Sunday</option>
+        </select>
         <% if (user) { %>
-            <a href="/logout">LOG OUT</a>
+          <a href="/logout">LOG OUT</a>
         <% } else { %>    
-            <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
-    </nav>
+      </nav>
+      

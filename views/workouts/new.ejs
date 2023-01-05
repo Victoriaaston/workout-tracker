@@ -1,44 +1,42 @@
 <%- include('../partials/header') %>
 
-    <div class="form-group"></div>
-    <br>
-    <h1>Add a new workout move: </h1>
-    <br>
-    <form action="/workouts" method="POST" class="form-inline">
-        <label>Day of the week: </label>
-        <select name="day" class="form-control">
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-        </select>
-        <br>
-        <br>
-        <label>Name: </label>
-        <input type="text" name="name" class="form-control">
-        <br>
-        <br>
-        <label>Description: </label>
-        <input type="text" name="description" class="form-control">
-        <br>
-        <br>
-        <label>Reps: </label>
-        <input type="number" name="sets" class="form-control">
-        <br>
-        <br>
-        <label>Sets: </label>
-        <input type="number" name="reps" class="form-control">
-        <br>
-        <br>
-        <label>Muscle Group: </label>
-        <input type="text" name="muscleGroup" class="form-control">
-        <br>
-        <br>
-        <input type="Submit" value="Add Move">
-    </form>
+<div id="formContainer" class="container mt-5 px-0">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <form action="/workouts" method="POST" class="form-inline">
+            <h3 class="text-center">Create a new workout: </h3>
+            <br>
+          <label>Day of the week: </label>
+          <select name="day" class="form-control">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+          </select>
+          <br>
+          <label>Name: </label>
+          <input type="text" name="name" class="form-control">
+          <br>
+          <label>Description: </label>
+          <input type="text" name="description" class="form-control">
+          <br>
+          <label>Reps: </label>
+          <input type="number" name="sets" class="form-control">
+          <br>
+          <label>Sets: </label>
+          <input type="number" name="reps" class="form-control">
+          <br>
+          <label>Muscle Group: </label>
+          <input type="text" name="muscleGroup" class="form-control">
+          <br>
+          <input type="Submit" value="Add Move" class="btn btn-primary">
+        </form>
+      </div>
     </div>
+  </div>
+  
 
     <%- include('../partials/footer') %>

@@ -32,29 +32,29 @@ router.get('/logout', function(req, res){
 });
 
 //only the logged in user can view their posts 
-router.get('/posts/:id',
-  passport.authenticate('oauth2', { session: false }),
-  async (req, res) => {
-    try {
-      // Get the user's ID from the access token
-      const userId = req.user.id;
+// router.get('/workouts/:id',
+//   passport.authenticate('oauth2', { session: false }),
+//   async (req, res) => {
+//     try {
+//       // Get the user's ID from the access token
+//       const userId = req.user.id;
       
-      // Get the post from the database
-      const workout = await Workout.findById(req.params.id);
+//       // Get the post from the database
+//       const workout = await Workout.findById(req.params.id);
       
-      // Check if the user's ID matches the ID of the user who created the post
-      if (workout.userId === userId) {
-        // If it does, display the post to the user
-        res.send(workout);
-      } else {
-        // If not, redirect the user or display an error message
-        res.status(401).send('You are not authorized to view this post');
-      }
-    } catch (error) {
-      res.status(500).send(error.message);
-    }
-  }
-);
+//       // Check if the user's ID matches the ID of the user who created the post
+//       if (Workout.user === userId) {
+//         // If it does, display the post to the user
+//         res.send(workout);
+//       } else {
+//         // If not, redirect the user or display an error message
+//         res.status(401).send('You are not authorized to view this post');
+//       }
+//     } catch (error) {
+//       res.status(500).send(error.message);
+//     }
+//   }
+// );
 
 
 

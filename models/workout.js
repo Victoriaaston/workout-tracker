@@ -10,7 +10,11 @@ const workoutSchema = new Schema({
     description: String,
     reps: Number, 
     sets: Number, 
-    muscleGroup: String
+    muscleGroup: String,
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    }
 })
 
 module.exports = mongoose.model('Workout', workoutSchema);

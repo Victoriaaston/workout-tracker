@@ -10,23 +10,26 @@
     <title>Workout-Tracker</title>
 </head>
 <body>
-    <nav>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <a href="/workouts/new">Add a new move</a>
         <a href="/workouts">View all moves</a>
-        <select onchange="location = this.value;">
-          <option value="/workouts/Monday">Select the day...</option>
-          <option value="/workouts/Monday">Monday</option>
-          <option value="/workouts/Tuesday">Tuesday</option>
-          <option value="/workouts/Wednesday">Wednesday</option>
-          <option value="/workouts/Thursday">Thursday</option>
-          <option value="/workouts/Friday">Friday</option>
-          <option value="/workouts/Saturday">Saturday</option>
-          <option value="/workouts/Sunday">Sunday</option>
-        </select>
+        <form class="form-inline my-2 my-lg-0">
+          <select onchange="location = this.value;" class="form-control">
+            <option value="/workouts/Monday">Select the day...</option>
+            <option value="/workouts/Monday">Monday</option>
+            <option value="/workouts/Tuesday">Tuesday</option>
+            <option value="/workouts/Wednesday">Wednesday</option>
+            <option value="/workouts/Thursday">Thursday</option>
+            <option value="/workouts/Friday">Friday</option>
+            <option value="/workouts/Saturday">Saturday</option>
+            <option value="/workouts/Sunday">Sunday</option>
+          </select>
+        </form>
         <% if (user) { %>
           <a href="/logout">LOG OUT</a>
         <% } else { %>    
           <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
       </nav>
+      
       

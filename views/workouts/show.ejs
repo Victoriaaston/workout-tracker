@@ -1,31 +1,24 @@
 <%- include('../partials/header') %>
-   <table class="table table-responsive text-center">  
-        <thead>
-            <tr>
-                <th><h1><%= title %></h1></th>
-            </tr>
-        </thead>
-            <tbody>
-                <% workouts.forEach(function(workout) { %>
-                    <tr>
-                        <td>Move: <%= workout.name %></td>
-                    </tr>
-                    <tr>
-                        <td>Description: <%= workout.description %></td>
-                    </tr>
-                    <tr>
-                        <td>Reps: <%= workout.reps %></td>
-                    </tr>
-                    <tr>
-                        <td>Sets: <%= workout.sets %></td>
-                    </tr>
-                    <tr>
-                        <td>muscleGroup: <%= workout.muscleGroup %></td>
-                    </tr>
-                    <tr>
-                        <td><button type="submit" class="btn btn-outline-secondary"><a href="/workouts/<%= workout._id %>/edit" class="text-decoration-none">Edit</a></button></td>
-                    </tr>
-                <% }) %>
-            </tbody>
-    </table>  
+<div class="container">
+    <div class="row">
+      <% workouts.forEach(function(workout) { %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title mb-3"><%= workout.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Description: <%= workout.description %></h6>
+              <p class="card-text mt-3">Reps: <%= workout.reps %></p>
+              <p class="card-text">Sets: <%= workout.sets %></p>
+              <p class="card-text">Muscle Group: <%= workout.muscleGroup %></p>
+              <button type="submit" class="btn btn-outline-secondary">
+                <a href="/workouts/<%= workout._id %>/edit" class="text-decoration-none">Edit</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+  
+  
 <%- include('../partials/footer') %>

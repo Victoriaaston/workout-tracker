@@ -2,35 +2,20 @@
 
 <div class="row">
     <% workouts.forEach(function(w) {%>
-      <div class="col-4">
+      <div class="col-12 col-md-6 col-lg-4">
         <div class="card">
-          <tr>
-            <td> Name: <%= w.name %></td>
-          </tr>
-          <br>
-          <tr>
-            <td> Day: <%= w.day %></td>
-          </tr>
-          <br>
-          <tr>
-            <td> Description: <%= w.description %></td>
-          </tr>
-          <br>
-          <tr>
-            <td> Muscle Group: <%= w.muscleGroup %></td>
-          </tr>
-          <br>
-          <td>
+          <div class="card-body">
+            <h5 class="card-title mb-3"><%= w.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Day: <%= w.day %></h6>
+            <p class="card-text mt-3">Muscle Group: <%= w.muscleGroup %></p>
+            <p class="card-text">Description: <%= w.description %></p>
             <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
-              <button type="submit" class="btn btn-outline-danger">X</button>
+              <button type="submit" class="btn btn-outline-danger">Delete</button>
             </form>
-          </td>
+          </div>
         </div>
       </div>
     <% }) %>
   </div>
   
-  
-  
-
 <%- include('../partials/footer') %>

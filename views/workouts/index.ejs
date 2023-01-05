@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<table id="list">
+<table id="list" class="table table-responsive text-center" id="allMoves">
     <thead>
         <tr>
             <th>Moves</th>
@@ -8,26 +8,27 @@
     </thead>
     <tbody>
         <% workouts.forEach(function(w) {%>
-            <tr>
-                <td><%= w.name %></td>
-            </tr>
-            <tr>
-                <td><%= w.day %></td>
-            </tr>
-            <tr>
-                <td><%= w.description %></td>
-            </tr>
-            <tr>
-                <td><%= w.muscleGroup %></td>
-            </tr>
-            <td>
-                <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
-                    <button type="submit">X</button>
-                </form>
-            </td>
+                <tr>
+                    <td> Name: <%= w.name %></td>
+                </tr>
+                <tr>
+                    <td> Day: <%= w.day %></td>
+                </tr>
+                <tr>
+                    <td> Description: <%= w.description %></td>
+                </tr>
+                <tr>
+                    <td> Muscle Group: <%= w.muscleGroup %></td>
+                </tr>
+                <td>
+                    <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-outline-danger">X</button>
+                    </form>
+                </td>
+            </div>
         <% }) %>
     </tbody>
 
 </table>
 
-</body>
+<%- include('../partials/footer') %>

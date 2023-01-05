@@ -1,36 +1,31 @@
 <%- include('../partials/header') %>
-
-<!-- for each?  -->
-<h1><%= title %></h1>
-
-<tbody>
-    <% workouts.forEach(function(workout) { %>
-        <br>
-        <tr>
-            <td>Move: <%= workout.name %></td>
-        </tr>
-        <br>
-        <tr>
-            <td>Description: <%= workout.description %></td>
-        </tr>
-        <br>
-        <tr>
-            <td>Reps: <%= workout.reps %></td>
-        </tr>
-        <br>
-        <tr>
-            <td>Sets: <%= workout.sets %></td>
-        </tr>
-        <br>
-        <tr>
-            <td>muscleGroup: <%= workout.muscleGroup %></td>
-        </tr>
-        <br>
-        <tr>
-            <button type="submit"><a href="/workouts/<%= workout._id %>/edit">Edit</a></button>
-        </tr>
-        <br>
-        <br>
-    <% }) %>
-    </tbody>
-</body>
+   <table class="table table-responsive text-center">  
+        <thead>
+            <tr>
+                <th><h1><%= title %></h1></th>
+            </tr>
+        </thead>
+            <tbody>
+                <% workouts.forEach(function(workout) { %>
+                    <tr>
+                        <td>Move: <%= workout.name %></td>
+                    </tr>
+                    <tr>
+                        <td>Description: <%= workout.description %></td>
+                    </tr>
+                    <tr>
+                        <td>Reps: <%= workout.reps %></td>
+                    </tr>
+                    <tr>
+                        <td>Sets: <%= workout.sets %></td>
+                    </tr>
+                    <tr>
+                        <td>muscleGroup: <%= workout.muscleGroup %></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" class="btn btn-outline-secondary"><a href="/workouts/<%= workout._id %>/edit" class="text-decoration-none">Edit</a></button></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+    </table>  
+<%- include('../partials/footer') %>

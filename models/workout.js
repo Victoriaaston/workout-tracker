@@ -6,8 +6,8 @@ const workoutSchema = new Schema({
         type: String, 
         enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     },
-    description: String,
     name: String,
+    description: String,
     reps: Number, 
     sets: Number, 
     muscleGroup: String

@@ -23,6 +23,7 @@ nav {
   display: flex;
   justify-content: center;
   justify-content: space-around;
+  padding: 5px;
 }
 
 nav a {
@@ -31,3 +32,8 @@ nav a {
   color: #808080;
 }
 
+.card {
+  margin: 20px 0;
+  padding: 5px;
+  text-align: center;
+}

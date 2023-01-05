@@ -1,34 +1,36 @@
 <%- include('../partials/header') %>
 
-<table id="list" class="table table-responsive text-center" id="allMoves">
-    <thead>
-        <tr>
-            <th>Moves</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% workouts.forEach(function(w) {%>
-                <tr>
-                    <td> Name: <%= w.name %></td>
-                </tr>
-                <tr>
-                    <td> Day: <%= w.day %></td>
-                </tr>
-                <tr>
-                    <td> Description: <%= w.description %></td>
-                </tr>
-                <tr>
-                    <td> Muscle Group: <%= w.muscleGroup %></td>
-                </tr>
-                <td>
-                    <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-outline-danger">X</button>
-                    </form>
-                </td>
-            </div>
-        <% }) %>
-    </tbody>
-
-</table>
+<div class="row">
+    <% workouts.forEach(function(w) {%>
+      <div class="col-4">
+        <div class="card">
+          <tr>
+            <td> Name: <%= w.name %></td>
+          </tr>
+          <br>
+          <tr>
+            <td> Day: <%= w.day %></td>
+          </tr>
+          <br>
+          <tr>
+            <td> Description: <%= w.description %></td>
+          </tr>
+          <br>
+          <tr>
+            <td> Muscle Group: <%= w.muscleGroup %></td>
+          </tr>
+          <br>
+          <td>
+            <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="btn btn-outline-danger">X</button>
+            </form>
+          </td>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  
+  
+  
 
 <%- include('../partials/footer') %>

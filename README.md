@@ -9,6 +9,9 @@ update each move, so when you increase the weight you are lifting or the distanc
 are running, it is super easy to enter it in. 
 
 [![HR0WLP4.md.png](https://iili.io/HR0WLP4.md.png)](https://freeimage.host/i/HR0WLP4)
+## Click Here to View the Deployed App
+https://workout-tracker-010523.herokuapp.com/
+
 ## Technologies Used
 * JavaScript
 * Node.js

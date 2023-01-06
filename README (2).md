@@ -33,7 +33,9 @@ Form to add a new move:
 [![HR08Gst.md.png](https://iili.io/HR08Gst.md.png)](https://freeimage.host/i/HR08Gst)
 
 View all of the workouts that have been added:
+
 [![HR0Z62p.md.png](https://iili.io/HR0Z62p.md.png)](https://freeimage.host/i/HR0Z62p)
+
 
 View workouts by day: 
 

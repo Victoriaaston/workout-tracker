@@ -15,14 +15,14 @@
         <a href="/workouts">View all moves</a>
         <form class="form-inline my-2 my-lg-0">
           <select onchange="location = this.value;" class="form-control">
-            <option value="/workouts/Monday">Select the day...</option>
-            <option value="/workouts/Monday">Monday</option>
-            <option value="/workouts/Tuesday">Tuesday</option>
-            <option value="/workouts/Wednesday">Wednesday</option>
-            <option value="/workouts/Thursday">Thursday</option>
-            <option value="/workouts/Friday">Friday</option>
-            <option value="/workouts/Saturday">Saturday</option>
-            <option value="/workouts/Sunday">Sunday</option>
+            <option id="page-heading"value="/workouts/Monday">Select the day...</option>
+            <option id="page-heading" value="/workouts/Monday">Monday</option>
+            <option id="page-heading" value="/workouts/Tuesday">Tuesday</option>
+            <option id="page-heading" value="/workouts/Wednesday">Wednesday</option>
+            <option id="page-heading" value="/workouts/Thursday">Thursday</option>
+            <option id="page-heading" value="/workouts/Friday">Friday</option>
+            <option id="page-heading" value="/workouts/Saturday">Saturday</option>
+            <option id="page-heading" value="/workouts/Sunday">Sunday</option>
           </select>
         </form>
         <% if (user) { %>
@@ -32,5 +32,28 @@
         <% } %>
       </nav>
       <br>
+
+      <script>
+  
+        const currentURL = window.location.href;
+      
+        // Check the URL and set the heading text based on the URL
+        if (currentURL.includes("/Monday")) {
+          document.getElementById("page-heading").textContent = "Monday";
+        } else if (currentURL.includes("/Tuesday")) {
+          document.getElementById("page-heading").textContent = "Tuesday";
+        } else if (currentURL.includes("/Wednesday")) {
+          document.getElementById("page-heading").textContent = "Wednesday";
+        } else if (currentURL.includes("/Thursday")) {
+          document.getElementById("page-heading").textContent = "Thursday";
+        } else if (currentURL.includes("/Friday")) {
+          document.getElementById("page-heading").textContent = "Friday";
+        } else if (currentURL.includes("/Saturday")) {
+          document.getElementById("page-heading").textContent = "Saturday";
+        } else if (currentURL.includes("/Sunday")) {
+          document.getElementById("page-heading").textContent = "Sunday";
+        }
+      
+        </script>
       
       

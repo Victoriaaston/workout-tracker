@@ -9,6 +9,15 @@ update each move, so when you increase the weight you are lifting or the distanc
 are running, it is super easy to enter it in. 
 
 [![HR0WLP4.md.png](https://iili.io/HR0WLP4.md.png)](https://freeimage.host/i/HR0WLP4)
+## Technologies Used
+* JavaScript
+* Node.js
+* Express
+* MongoDB
+* Mongoose
+* Bootstrap
+* CSS
+
 
 ## User Stories
 AAU = As a user... 

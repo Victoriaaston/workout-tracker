@@ -39,8 +39,10 @@ View workouts by day:
 
 Monday:
 [![HR6STfj.md.png](https://iili.io/HR6STfj.md.png)](https://freeimage.host/i/HR6STfj)
+
 Friday: 
 [![HR6UpGs.md.png](https://iili.io/HR6UpGs.md.png)](https://freeimage.host/i/HR6UpGs)
+
 Update your move: 
 [![HR64rGe.md.png](https://iili.io/HR64rGe.md.png)](https://freeimage.host/i/HR64rGe)
 ## Ice Box
